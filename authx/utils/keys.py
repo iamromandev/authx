@@ -18,8 +18,7 @@ class HTTPKeys:
             else key
         )
 
-        namespaced_key = await HTTPKeys.generate_namespaced_key(key=_key, config=config)
-        return namespaced_key
+        return await HTTPKeys.generate_namespaced_key(key=_key, config=config)
 
     @staticmethod
     async def generate_keys(
